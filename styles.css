@@ -1,0 +1,28 @@
+* {
+  font-family: 'Fira Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h3 {
+  color: var(--bs-secondary-text-emphasis);
+}
+
+h4 {
+  color: var(--bs-primary-text-emphasis);
+}
+
+#toc {
+  align-content: flex-start;
+  height: 100vh;
+  border-right: 1px solid var(--bs-primary-text-emphasis);
+}
+
+.podzag {
+  border-bottom: 1px solid var(--bs-dark-text-emphasis);
+}
+
+@media (max-width: 1300px) {
+  .scrollspy {
+    display: none;
+  }
+}
