@@ -3,6 +3,11 @@
   scroll-behavior: smooth;
 }
 
+h2 {
+  color: var(--bs-secondary-text-emphasis);
+  text-align: center;
+}
+
 h3 {
   color: var(--bs-secondary-text-emphasis);
 }
@@ -13,8 +18,16 @@ h4 {
 
 #toc {
   align-content: flex-start;
-  height: 100vh;
-  border-right: 1px solid var(--bs-primary-text-emphasis);
+  top: 20px;
+}
+
+.border-main {
+  border-left: 1px solid var(--bs-primary-text-emphasis);
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
 }
 
 .podzag {
