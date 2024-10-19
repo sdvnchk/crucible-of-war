@@ -16,6 +16,10 @@ h4 {
   color: var(--bs-primary-text-emphasis);
 }
 
+main {
+  min-height: 70vh;
+}
+
 #toc {
   align-content: flex-start;
   top: 20px;
@@ -34,8 +38,44 @@ h4 {
   border-bottom: 1px solid var(--bs-dark-text-emphasis);
 }
 
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  width: 15rem;
+  height: 15rem;
+}
+
+.map-link {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .scrollspy {
     display: none;
+  }
+
+  .img-magnifier-container {
+    display: none;
+  }
+
+  .map-link {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-4 {
+    display: none !important;
+  }
+
+  .col-8 {
+    width: 100%;
+    ;
   }
 }
