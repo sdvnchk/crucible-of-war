@@ -16,13 +16,22 @@ h4 {
   color: var(--bs-primary-text-emphasis);
 }
 
+.navbar .container-fluid {
+  justify-content: space-evenly;
+}
+
+.offcanvas.offcanvas-end {
+  width: 200px;
+}
+
 main {
+  margin-top: 12rem;
   min-height: 70vh;
 }
 
 #toc {
   align-content: flex-start;
-  top: 20px;
+  top: 200px;
 }
 
 .border-main {
@@ -66,6 +75,10 @@ main {
 
   .map-link {
     display: flex;
+  }
+
+  .alert-warning {
+    display: none;
   }
 }
 

@@ -20,7 +20,7 @@
 </head>
 
 <body data-bs-theme="dark">
-  <header class="text-center py-3 mb-4 border-bottom">
+  <header class="text-center py-3 mb-4 border-bottom bg-dark fixed-top d-none d-lg-block">
     <a href="index.html"
       class="d-flex justify-content-center align-items-center mb-3 text-decoration-none text-dark-emphasis">
       <img src="logo.jpg" class="img-fluid logo rounded-4" alt="Дракончик">
@@ -41,6 +41,48 @@
     </nav>
   </header>
 
+  <header class="text-center py-3 mb-4 border-bottom bg-dark fixed-top d-lg-none">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="col">
+          <a href="index.html"
+            class="d-flex justify-content-center align-items-center mb-3 text-decoration-none text-dark-emphasis">
+            <img src="logo.jpg" class="img-fluid logo rounded-4" alt="Дракончик">
+            <span class="ms-4 fs-2">Горнило Войны</span>
+          </a>
+        </div>
+        <div class="col-3">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Навигация</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-start">
+          <ul class="nav justify-content-start flex-column nav-underline">
+            <li class="nav-item"><a href="index.html" class="nav-link me-4 active">Главная</a></li>
+            <li class="nav-item"><a href="lore.html" class="nav-link">Лор</a></li>
+            <li class="nav-item"><a href="map.html" class="nav-link">Мировая Карта</a></li>
+            <li class="nav-item"><a href="races.html" class="nav-link">Расы</a></li>
+            <li class="nav-item"><a href="continents.html" class="nav-link">Континенты</a></li>
+            <li class="nav-item"><a href="gods.html" class="nav-link">Боги и Религии</a></li>
+            <li class="nav-item"><a href="zodiac.html" class="nav-link">Знаки Зодиака</a></li>
+            <li class="nav-item"><a href="eras.html" class="nav-link">Эры и Временные периоды</a></li>
+            <li class="nav-item"><a href="politics.html" class="nav-link">Политическая Структура</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
   <main class="px-4 py-4">
     <div class="container-fluid">
       <div class="col ps-4" data-bs-spy="scroll" data-bs-target="#toc">
@@ -52,8 +94,7 @@
               <h3>Это главная страничка, будь как дома путник.</h3>
               <p>Переходи куда тебе нужно и поглащай тонны интересной информации!</p>
 
-              <!-- <p class="mt-2">Сюда кидать за сессию: <span class="text-primary-emphasis">4817 7605 1371
-                  7268</span></p> -->
+              <!-- <p class="mt-2">Сюда кидать за сессию: <span class="text-primary-emphasis">**** **** **** ****</span></p> -->
               <!-- <p>Тут еще че-то</p> -->
 
               <p class="mt-5"><em>Напоминание: над сайтом все еще ведутся работы, так что могут встречаться неполные или
@@ -66,43 +107,40 @@
           <hr class="my-5">
           <h2 class="mb-5">Обновления</h2>
           <hr class="mb-5">
-          <div class="row">
-            <div class="col">
-              <h3>Версия 1.0</h3>
-              <p>Открытие сайта!</p>
-            </div>
-            <div class="col">
-              <h3>Версия 1.1</h3>
-              <p>Изменена главная страница</p>
-            </div>
-            <!-- <div class="col">
+          <div class="column">
+            <!-- <div class="col mb-5">
               <h3></h3>
               <p></p>
               <p></p>
               <p></p>
               <p></p>
             </div>
-            <div class="col">
+            <div class="col mb-5">
               <h3></h3>
               <p></p>
               <p></p>
               <p></p>
               <p></p>
             </div>
-            <div class="col">
-              <h3></h3>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
-            </div>
-            <div class="col">
+            <div class="col mb-5">
               <h3></h3>
               <p></p>
               <p></p>
               <p></p>
               <p></p>
             </div> -->
+            <div class="col mb-5">
+              <h3>Версия 1.1</h3>
+              <p>Добавлено бургер-меню для мобильных устройств</p>
+              <p>Добавлена подсказка для лупы на мировой карте</p>
+              <p>Улучшено поведение навигационной панели, теперь она прилипает к верху экрана</p>
+              <p>Улучшено поведение нижней панели, теперь она всегда находится снизу экрана</p>
+              <p>Исправления мелких ошибок</p>
+            </div>
+            <div class="col">
+              <h3>Версия 1.0</h3>
+              <p>Открытие сайта!</p>
+            </div>
           </div>
         </div>
       </div>

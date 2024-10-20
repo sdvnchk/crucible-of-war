@@ -20,7 +20,7 @@
 </head>
 
 <body data-bs-theme="dark">
-  <header class="text-center py-3 mb-4 border-bottom">
+  <header class="text-center py-3 mb-4 border-bottom bg-dark fixed-top d-none d-lg-block">
     <a href="index.html"
       class="d-flex justify-content-center align-items-center mb-3 text-decoration-none text-dark-emphasis">
       <img src="logo.jpg" class="img-fluid logo rounded-4" alt="Дракончик">
@@ -38,6 +38,48 @@
         <li class="nav-item"><a href="eras.html" class="nav-link">Эры и Временные периоды</a></li>
         <li class="nav-item"><a href="politics.html" class="nav-link">Политическая Структура</a></li>
       </ul>
+    </nav>
+  </header>
+
+  <header class="text-center py-3 mb-4 border-bottom bg-dark fixed-top d-lg-none">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="col">
+          <a href="index.html"
+            class="d-flex justify-content-center align-items-center mb-3 text-decoration-none text-dark-emphasis">
+            <img src="logo.jpg" class="img-fluid logo rounded-4" alt="Дракончик">
+            <span class="ms-4 fs-2">Горнило Войны</span>
+          </a>
+        </div>
+        <div class="col-3">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Навигация</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-start">
+          <ul class="nav justify-content-start flex-column nav-underline">
+            <li class="nav-item"><a href="index.html" class="nav-link text-dark-emphasis me-4">Главная</a></li>
+            <li class="nav-item"><a href="lore.html" class="nav-link">Лор</a></li>
+            <li class="nav-item"><a href="map.html" class="nav-link">Мировая Карта</a></li>
+            <li class="nav-item"><a href="races.html" class="nav-link">Расы</a></li>
+            <li class="nav-item"><a href="continents.html" class="nav-link">Континенты</a></li>
+            <li class="nav-item"><a href="gods.html" class="nav-link active">Боги и Религии</a></li>
+            <li class="nav-item"><a href="zodiac.html" class="nav-link">Знаки Зодиака</a></li>
+            <li class="nav-item"><a href="eras.html" class="nav-link">Эры и Временные периоды</a></li>
+            <li class="nav-item"><a href="politics.html" class="nav-link">Политическая Структура</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
     </nav>
   </header>
 
