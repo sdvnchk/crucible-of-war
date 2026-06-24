@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Классы — Туэрбэлл</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">
+    <img src="logo.jpg" alt="Туэрбэлл">
+    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="lore.html">Лор</a></li>
+    <li><a href="races.html">Расы</a></li>
+    <li><a href="languages.html">Языки</a></li>
+    <li><a href="map.html">Карта</a></li>
+    <li><a href="regions.html">Регионы</a></li>
+    <li><a href="classes.html" class="active">Классы</a></li>
+    <li><a href="tips.html">Советы</a></li>
+    <li><a href="gods.html">Боги</a></li>
+    <li><a href="eras.html">Эры</a></li>
+  </ul>
+  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
+</nav>
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="drawer-close-row">
+    <span class="drawer-title">Навигация</span>
+    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
+  </div>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="lore.html">Лор</a></li>
+    <li><a href="races.html">Расы</a></li>
+    <li><a href="languages.html">Языки</a></li>
+    <li><a href="map.html">Карта Мира</a></li>
+    <li><a href="regions.html">Регионы</a></li>
+    <li><a href="classes.html" class="active">Классы</a></li>
+    <li><a href="tips.html">Советы новичкам</a></li>
+    <li><a href="gods.html">Боги и религии</a></li>
+    <li><a href="eras.html">Эры и эпохи</a></li>
+  </ul>
+</div>
+
+<div class="page-content">
+<main class="section-wide">
+
+  <div class="page-header">
+    <h1>⚔️ Классы Pathfinder 2e</h1>
+    <p>Выбери свой путь в мире Туэрбэлл — каждый класс уникален по стилю игры и сложности освоения</p>
+  </div>
+
+  <!-- Difficulty legend -->
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;">
+    <span style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);">Сложность:</span>
+    <span style="display:flex;align-items:center;gap:0.4rem;"><span class="diff-badge d1">Лёгкий</span><span style="font-size:0.82rem;color:var(--text-muted);">— отлично для новичков</span></span>
+    <span style="display:flex;align-items:center;gap:0.4rem;"><span class="diff-badge d2">Средне-лёгкий</span></span>
+    <span style="display:flex;align-items:center;gap:0.4rem;"><span class="diff-badge d3">Средний</span></span>
+    <span style="display:flex;align-items:center;gap:0.4rem;"><span class="diff-badge d4">Сложный</span></span>
+    <span style="display:flex;align-items:center;gap:0.4rem;"><span class="diff-badge d5">Эксперт</span><span style="font-size:0.82rem;color:var(--text-muted);">— для опытных игроков</span></span>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterClasses(this,'all')">Все классы</button>
+    <button class="filter-btn" onclick="filterClasses(this,'martials')">Боевые</button>
+    <button class="filter-btn" onclick="filterClasses(this,'casters')">Маги</button>
+    <button class="filter-btn" onclick="filterClasses(this,'support')">Поддержка</button>
+    <button class="filter-btn" onclick="filterClasses(this,'easy')">Лёгкие (новичкам)</button>
+  </div>
+
+  <div class="classes-grid" id="classes-grid">
+
+    <!-- Воин -->
+    <div class="class-card" data-tags="martials easy d1">
+      <div class="class-header">
+        <div class="class-icon">⚔️</div>
+        <div>
+          <div class="class-name">Воин</div>
+          <div class="class-name-en">Fighter</div>
+        </div>
+      </div>
+      <p class="class-desc">Мастер боя. Знает оружие лучше кого-либо, получает самые мощные боевые умения. Прямолинейный и эффективный.</p>
+      <div class="class-footer d1">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d1">Лёгкий</span>
+      </div>
+    </div>
+
+    <!-- Варвар -->
+    <div class="class-card" data-tags="martials easy d1">
+      <div class="class-header">
+        <div class="class-icon">🪓</div>
+        <div>
+          <div class="class-name">Варвар</div>
+          <div class="class-name-en">Barbarian</div>
+        </div>
+      </div>
+      <p class="class-desc">Ярость как оружие. В бешенстве становится невероятно мощным. Огромный урон, толстая броня из ярости.</p>
+      <div class="class-footer d1">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d1">Лёгкий</span>
+      </div>
+    </div>
+
+    <!-- Чемпион -->
+    <div class="class-card" data-tags="martials support easy d2">
+      <div class="class-header">
+        <div class="class-icon">🛡️</div>
+        <div>
+          <div class="class-name">Чемпион</div>
+          <div class="class-name-en">Champion</div>
+        </div>
+      </div>
+      <p class="class-desc">Священный воин, связанный клятвой с богом или идеалом. Защищает союзников, нанося праведный урон.</p>
+      <div class="class-footer d2">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d2">Средне-лёгкий</span>
+      </div>
+    </div>
+
+    <!-- Чародей -->
+    <div class="class-card" data-tags="casters easy d2">
+      <div class="class-header">
+        <div class="class-icon">✨</div>
+        <div>
+          <div class="class-name">Чародей</div>
+          <div class="class-name-en">Sorcerer</div>
+        </div>
+      </div>
+      <p class="class-desc">Магия в крови, унаследованная от предков. Много заклинаний, интуитивное колдовство без заучивания.</p>
+      <div class="class-footer d2">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d2">Средне-лёгкий</span>
+      </div>
+    </div>
+
+    <!-- Бард -->
+    <div class="class-card" data-tags="casters support d3">
+      <div class="class-header">
+        <div class="class-icon">🎭</div>
+        <div>
+          <div class="class-name">Бард</div>
+          <div class="class-name-en">Bard</div>
+        </div>
+      </div>
+      <p class="class-desc">Вдохновляет союзников песнями и заклинаниями. Мастер поддержки: баффы, дебаффы, гибкость в бою.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Жрец -->
+    <div class="class-card" data-tags="casters support d3">
+      <div class="class-header">
+        <div class="class-icon">☀️</div>
+        <div>
+          <div class="class-name">Жрец</div>
+          <div class="class-name-en">Cleric</div>
+        </div>
+      </div>
+      <p class="class-desc">Слуга бога с божественной магией. Лечение, проклятия, мощные заклинания. Незаменим в группе.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Монах -->
+    <div class="class-card" data-tags="martials d3">
+      <div class="class-header">
+        <div class="class-icon">🥋</div>
+        <div>
+          <div class="class-name">Монах</div>
+          <div class="class-name-en">Monk</div>
+        </div>
+      </div>
+      <p class="class-desc">Мастер рукопашного боя и ки-энергии. Быстрый, мобильный, смертоносный без оружия. Много комб.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Следопыт -->
+    <div class="class-card" data-tags="martials d3">
+      <div class="class-header">
+        <div class="class-icon">🏹</div>
+        <div>
+          <div class="class-name">Следопыт</div>
+          <div class="class-name-en">Ranger</div>
+        </div>
+      </div>
+      <p class="class-desc">Охотник и следопыт. Отмечает цели, наносит огромный урон в дальнем бою. Может иметь животного компаньона.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Плут -->
+    <div class="class-card" data-tags="martials d3">
+      <div class="class-header">
+        <div class="class-icon">🗡️</div>
+        <div>
+          <div class="class-name">Плут</div>
+          <div class="class-name-en">Rogue</div>
+        </div>
+      </div>
+      <p class="class-desc">Мастер хитрости. Снуп удары, скрытность, огромный разовый урон. Лучшие навыки из всех классов.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Авантюрист -->
+    <div class="class-card" data-tags="martials d3">
+      <div class="class-header">
+        <div class="class-icon">🤺</div>
+        <div>
+          <div class="class-name">Авантюрист</div>
+          <div class="class-name-en">Swashbuckler</div>
+        </div>
+      </div>
+      <p class="class-desc">Стиль и грация — его оружие. Набирает «Лоск» эффектными манёврами, выдаёт мощный финишер.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Кинетик -->
+    <div class="class-card" data-tags="casters d3">
+      <div class="class-header">
+        <div class="class-icon">🔥</div>
+        <div>
+          <div class="class-name">Кинетик</div>
+          <div class="class-name-en">Kineticist</div>
+        </div>
+      </div>
+      <p class="class-desc">Повелитель стихий: огонь, вода, земля, воздух, лёд. Не тратит ячейки — стихийная сила всегда с ним.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Таматург -->
+    <div class="class-card" data-tags="martials support d3">
+      <div class="class-header">
+        <div class="class-icon">🔮</div>
+        <div>
+          <div class="class-name">Таматург</div>
+          <div class="class-name-en">Thaumaturge</div>
+        </div>
+      </div>
+      <p class="class-desc">Использует магические предметы-артефакты как оружие. Находит слабости врагов, поддерживает союзников.</p>
+      <div class="class-footer d3">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d3">Средний</span>
+      </div>
+    </div>
+
+    <!-- Друид -->
+    <div class="class-card" data-tags="casters support d4">
+      <div class="class-header">
+        <div class="class-icon">🌿</div>
+        <div>
+          <div class="class-name">Друид</div>
+          <div class="class-name-en">Druid</div>
+        </div>
+      </div>
+      <p class="class-desc">Страж природы. Превращается в зверей, призывает стихии, лечит. Гибкий класс с множеством специализаций.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Алхимик -->
+    <div class="class-card" data-tags="support d4">
+      <div class="class-header">
+        <div class="class-icon">⚗️</div>
+        <div>
+          <div class="class-name">Алхимик</div>
+          <div class="class-name-en">Alchemist</div>
+        </div>
+      </div>
+      <p class="class-desc">Создаёт бомбы, зелья и эликсиры. Уникальная система ресурсов. Универсален, но требует планирования.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Волшебник -->
+    <div class="class-card" data-tags="casters d4">
+      <div class="class-header">
+        <div class="class-icon">📚</div>
+        <div>
+          <div class="class-name">Волшебник</div>
+          <div class="class-name-en">Wizard</div>
+        </div>
+      </div>
+      <p class="class-desc">Мастер тайной магии. Огромный спеллбук, подготавливает заклинания каждый день. Мощнейший контроль поля боя.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Ведьма -->
+    <div class="class-card" data-tags="casters support d4">
+      <div class="class-header">
+        <div class="class-icon">🧙</div>
+        <div>
+          <div class="class-name">Ведьма</div>
+          <div class="class-name-en">Witch</div>
+        </div>
+      </div>
+      <p class="class-desc">Получает магию от таинственного патрона через фамильяра. Гексы, проклятия, поддержка союзников.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Следователь -->
+    <div class="class-card" data-tags="d4">
+      <div class="class-header">
+        <div class="class-icon">🔍</div>
+        <div>
+          <div class="class-name">Следователь</div>
+          <div class="class-name-en">Investigator</div>
+        </div>
+      </div>
+      <p class="class-desc">Дедукция как оружие. Изучает цель, чтобы нанести максимальный удар. Невероятно силён вне боя.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Призыватель -->
+    <div class="class-card" data-tags="casters d4">
+      <div class="class-header">
+        <div class="class-icon">🌀</div>
+        <div>
+          <div class="class-name">Призыватель</div>
+          <div class="class-name-en">Summoner</div>
+        </div>
+      </div>
+      <p class="class-desc">Связан с сущностью-эйдолоном душой. Фактически управляет двумя персонажами одновременно.</p>
+      <div class="class-footer d4">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot"></div>
+        </div>
+        <span class="diff-badge d4">Сложный</span>
+      </div>
+    </div>
+
+    <!-- Психик -->
+    <div class="class-card" data-tags="casters d5">
+      <div class="class-header">
+        <div class="class-icon">🧠</div>
+        <div>
+          <div class="class-name">Психик</div>
+          <div class="class-name-en">Psychic</div>
+        </div>
+      </div>
+      <p class="class-desc">Ментальная магия без ячеек. Использует «разгон» — мощные заклинания ценой умственного перенапряжения.</p>
+      <div class="class-footer d5">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div>
+        </div>
+        <span class="diff-badge d5">Эксперт</span>
+      </div>
+    </div>
+
+    <!-- Оракул -->
+    <div class="class-card" data-tags="casters d5">
+      <div class="class-header">
+        <div class="class-icon">👁️</div>
+        <div>
+          <div class="class-name">Оракул</div>
+          <div class="class-name-en">Oracle</div>
+        </div>
+      </div>
+      <p class="class-desc">Проклятый пророк. Мощнейшие заклинания, но каждое использование усиливает проклятие. Высокий риск — высокая награда.</p>
+      <div class="class-footer d5">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div>
+        </div>
+        <span class="diff-badge d5">Эксперт</span>
+      </div>
+    </div>
+
+    <!-- Магус -->
+    <div class="class-card" data-tags="martials casters d5">
+      <div class="class-header">
+        <div class="class-icon">⚡</div>
+        <div>
+          <div class="class-name">Магус</div>
+          <div class="class-name-en">Magus</div>
+        </div>
+      </div>
+      <p class="class-desc">Сочетает боевое мастерство и магию в одном ударе. Заряжает оружие заклинанием — требует идеального тайминга.</p>
+      <div class="class-footer d5">
+        <span class="diff-label">Сложность</span>
+        <div class="diff-dots">
+          <div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div><div class="diff-dot on"></div>
+        </div>
+        <span class="diff-badge d5">Эксперт</span>
+      </div>
+    </div>
+
+  </div><!-- /classes-grid -->
+
+  <div style="margin-top:2rem;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text-muted);font-size:0.9rem;font-style:italic;text-align:center;">
+    Подробные описания классов в контексте мира Туэрбэлл — появятся с обновлением лора.
+    Пока что ориентируйся на официальную документацию Pathfinder 2e.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <ul class="footer-nav">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="lore.html">Лор</a></li>
+    <li><a href="races.html">Расы</a></li>
+    <li><a href="languages.html">Языки</a></li>
+    <li><a href="map.html">Карта</a></li>
+    <li><a href="regions.html">Регионы</a></li>
+    <li><a href="classes.html">Классы</a></li>
+    <li><a href="tips.html">Советы</a></li>
+    <li><a href="gods.html">Боги</a></li>
+    <li><a href="eras.html">Эры</a></li>
+  </ul>
+  <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
+</footer>
+</div>
+
+<script>
+  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
+
+  function filterClasses(btn, tag) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.class-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      card.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
