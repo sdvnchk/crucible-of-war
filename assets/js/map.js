@@ -35,7 +35,11 @@ class MapViewer {
 
     const hint = document.getElementById('map-hint');
     if (hint) {
-      this._hintTimer = setTimeout(() => hint.classList.add('hidden'), 4000);
+      const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      if (isTouch) {
+        hint.textContent = 'Щипок — масштаб · Перетащить — перемещение · Двойное касание — приблизить';
+      }
+      this._hintTimer = setTimeout(() => hint.classList.add('hidden'), 5000);
     }
   }
 
