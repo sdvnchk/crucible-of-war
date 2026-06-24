@@ -3,110 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
   <title>Карта Мира — Туэрбэлл</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-page="map">
 
-<nav class="site-nav">
-  <a href="index.html" class="nav-brand">
-    <img src="logo.jpg" alt="Туэрбэлл">
-    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html" class="active">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html">Эры</a></li>
-  </ul>
-  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
-</nav>
+  <div id="header-placeholder"></div>
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="mobile-drawer" id="mobile-drawer">
-  <div class="drawer-close-row">
-    <span class="drawer-title">Навигация</span>
-    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
-  </div>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html" class="active">Карта Мира</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы новичкам</a></li>
-    <li><a href="gods.html">Боги и религии</a></li>
-    <li><a href="eras.html">Эры и эпохи</a></li>
-  </ul>
-</div>
+  <div class="page-content">
+    <main class="section-wide" style="flex:1;">
 
-<div class="page-content">
+      <div class="page-header">
+        <h1>🗺️ Карта Мира</h1>
+        <p>Туэрбэлл — 49 континентов, бесконечная война, один мир</p>
+      </div>
 
-  <main class="section-wide" style="flex:1;">
-    <div class="page-header">
-      <h1>🗺️ Карта Мира</h1>
-      <p>Туэрбэлл — 49 континентов, бесконечная война, один мир</p>
-    </div>
+      <div class="map-wrapper">
+        <div class="map-container" id="map-container">
+          <img src="assets/img/map.jpg" alt="Карта мира Туэрбэлл" id="map-img" class="map-img">
 
-    <div class="map-wrapper">
-      <div class="map-container" id="map-container">
-        <img src="map.jpg" alt="Карта мира Туэрбэлл" id="map-img" class="map-img">
+          <div class="map-hint" id="map-hint">
+            Колесо мыши — зум &nbsp;·&nbsp; Перетащить — перемещение &nbsp;·&nbsp; Двойной клик — приблизить
+          </div>
 
-        <div class="map-hint" id="map-hint">
-          Колесо мыши — зум &nbsp;·&nbsp; Перетащить — перемещение &nbsp;·&nbsp; Двойной клик — приблизить
-        </div>
+          <div class="map-scale" id="map-scale">100%</div>
 
-        <div class="map-scale" id="map-scale">100%</div>
-
-        <div class="map-controls">
-          <button class="map-btn" onclick="mapViewer.zoomIn()"  title="Приблизить">+</button>
-          <button class="map-btn" onclick="mapViewer.zoomOut()" title="Отдалить">−</button>
-          <button class="map-btn" onclick="mapViewer.reset()"   title="Сбросить"
-            style="font-size:0.85rem;letter-spacing:0.05em;">↺</button>
+          <div class="map-controls">
+            <button class="map-btn" onclick="mapViewer.zoomIn()"  title="Приблизить">+</button>
+            <button class="map-btn" onclick="mapViewer.zoomOut()" title="Отдалить">−</button>
+            <button class="map-btn" onclick="mapViewer.reset()"   title="Сбросить вид">↺</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <p style="color:var(--text-muted);font-size:0.88rem;margin-top:0.75rem;text-align:center;">
-      Используй колесо мыши для масштабирования, перетаскивай карту для навигации.
-      На мобильном — щипок двумя пальцами для зума.
-    </p>
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-top:0.75rem;text-align:center;">
+        Колесо мыши — масштабирование · Перетаскивание — навигация · Мобильный — щипок двумя пальцами
+      </p>
 
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <ul class="footer-nav">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="lore.html">Лор</a></li>
-      <li><a href="races.html">Расы</a></li>
-      <li><a href="languages.html">Языки</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="regions.html">Регионы</a></li>
-      <li><a href="classes.html">Классы</a></li>
-      <li><a href="tips.html">Советы</a></li>
-      <li><a href="gods.html">Боги</a></li>
-      <li><a href="eras.html">Эры</a></li>
-    </ul>
-    <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
-  </footer>
+    <div id="footer-placeholder"></div>
+  </div>
 
-</div>
-
-<script src="map.js"></script>
-<script>
-  const mapViewer = new MapViewer('map-container', 'map-img');
-
-  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
-</script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script>const mapViewer = new MapViewer('map-container', 'map-img');</script>
 </body>
 </html>

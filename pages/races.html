@@ -3,100 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
   <title>Расы — Туэрбэлл</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-page="races">
 
-<nav class="site-nav">
-  <a href="index.html" class="nav-brand">
-    <img src="logo.jpg" alt="Туэрбэлл">
-    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html" class="active">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html">Эры</a></li>
-  </ul>
-  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
-</nav>
+  <div id="header-placeholder"></div>
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="mobile-drawer" id="mobile-drawer">
-  <div class="drawer-close-row">
-    <span class="drawer-title">Навигация</span>
-    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
-  </div>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html" class="active">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта Мира</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы новичкам</a></li>
-    <li><a href="gods.html">Боги и религии</a></li>
-    <li><a href="eras.html">Эры и эпохи</a></li>
-  </ul>
-</div>
+  <div class="page-content">
 
-<div class="page-content">
-
-  <div class="placeholder-center">
-    <div class="placeholder-icon">🧝</div>
-    <h1 class="placeholder-title">Расы</h1>
-    <p class="placeholder-subtitle">Народы мира Туэрбэлл</p>
-    <p class="placeholder-desc">
-      Расы мира сохранятся, но получат обновлённую историю и механики
-      для Pathfinder 2e. Инвазивные и родные народы Туэрбэлл —
-      скоро здесь появится полное описание каждого.
-    </p>
-    <div class="placeholder-tags">
-      <span class="placeholder-tag">Инвазивные расы</span>
-      <span class="placeholder-tag">Родные расы</span>
-      <span class="placeholder-tag">Эльфы</span>
-      <span class="placeholder-tag">Орки</span>
-      <span class="placeholder-tag">Гномы</span>
-      <span class="placeholder-tag">Полурослики</span>
-      <span class="placeholder-tag">Люди</span>
-      <span class="placeholder-tag">Драконорождённые</span>
-      <span class="placeholder-tag">Валийцы</span>
-      <span class="placeholder-tag">Гоблины</span>
-      <span class="placeholder-tag">Фурты</span>
+    <div class="placeholder-center">
+      <div class="placeholder-icon">🧝</div>
+      <h1 class="placeholder-title">Расы</h1>
+      <p class="placeholder-subtitle">Народы мира Туэрбэлл</p>
+      <p class="placeholder-desc">
+        Расы мира сохранятся, но получат обновлённую историю и механики
+        для Pathfinder 2e. Инвазивные и родные народы Туэрбэлл —
+        скоро здесь появится полное описание каждого.
+      </p>
+      <div class="placeholder-tags">
+        <span class="placeholder-tag">Инвазивные расы</span>
+        <span class="placeholder-tag">Родные расы</span>
+        <span class="placeholder-tag">Эльфы</span>
+        <span class="placeholder-tag">Орки</span>
+        <span class="placeholder-tag">Гномы</span>
+        <span class="placeholder-tag">Полурослики</span>
+        <span class="placeholder-tag">Люди</span>
+        <span class="placeholder-tag">Драконорождённые</span>
+        <span class="placeholder-tag">Валийцы</span>
+        <span class="placeholder-tag">Гоблины</span>
+        <span class="placeholder-tag">Фурты</span>
+      </div>
+      <span class="wip-badge">✦ Переписывается под Pathfinder 2e ✦</span>
     </div>
-    <span class="wip-badge">✦ Переписывается под Pathfinder 2e ✦</span>
+
+    <div id="footer-placeholder"></div>
   </div>
 
-  <footer class="site-footer">
-    <ul class="footer-nav">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="lore.html">Лор</a></li>
-      <li><a href="races.html">Расы</a></li>
-      <li><a href="languages.html">Языки</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="regions.html">Регионы</a></li>
-      <li><a href="classes.html">Классы</a></li>
-      <li><a href="tips.html">Советы</a></li>
-      <li><a href="gods.html">Боги</a></li>
-      <li><a href="eras.html">Эры</a></li>
-    </ul>
-    <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
-  </footer>
-
-</div>
-
-<script>
-  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
-</script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>

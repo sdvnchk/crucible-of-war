@@ -3,95 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
   <title>Эры и Эпохи — Туэрбэлл</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-page="eras">
 
-<nav class="site-nav">
-  <a href="index.html" class="nav-brand">
-    <img src="logo.jpg" alt="Туэрбэлл">
-    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html" class="active">Эры</a></li>
-  </ul>
-  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
-</nav>
+  <div id="header-placeholder"></div>
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="mobile-drawer" id="mobile-drawer">
-  <div class="drawer-close-row">
-    <span class="drawer-title">Навигация</span>
-    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
-  </div>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта Мира</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы новичкам</a></li>
-    <li><a href="gods.html">Боги и религии</a></li>
-    <li><a href="eras.html" class="active">Эры и эпохи</a></li>
-  </ul>
-</div>
+  <div class="page-content">
 
-<div class="page-content">
-
-  <div class="placeholder-center">
-    <div class="placeholder-icon">⏳</div>
-    <h1 class="placeholder-title">Эры и Эпохи</h1>
-    <p class="placeholder-subtitle">Летопись Туэрбэлл</p>
-    <p class="placeholder-desc">
-      От сотворения мира до современной Эры Смертных — подробная хронология
-      всех эпох, событий и переломных моментов истории Туэрбэлл.
-    </p>
-    <div class="placeholder-tags">
-      <span class="placeholder-tag">Эра Сотворения</span>
-      <span class="placeholder-tag">Эра Вечной Войны</span>
-      <span class="placeholder-tag">Эра Воскрешений</span>
-      <span class="placeholder-tag">Восстание Смертных</span>
-      <span class="placeholder-tag">Эра Смертных</span>
-      <span class="placeholder-tag">12 Эпох Королей</span>
-      <span class="placeholder-tag">Наши дни</span>
+    <div class="placeholder-center">
+      <div class="placeholder-icon">⏳</div>
+      <h1 class="placeholder-title">Эры и Эпохи</h1>
+      <p class="placeholder-subtitle">Летопись Туэрбэлл</p>
+      <p class="placeholder-desc">
+        От сотворения мира до современной Эры Смертных — подробная хронология
+        всех эпох, событий и переломных моментов истории Туэрбэлл.
+      </p>
+      <div class="placeholder-tags">
+        <span class="placeholder-tag">Эра Сотворения</span>
+        <span class="placeholder-tag">Эра Вечной Войны</span>
+        <span class="placeholder-tag">Эра Воскрешений</span>
+        <span class="placeholder-tag">Восстание Смертных</span>
+        <span class="placeholder-tag">Эра Смертных</span>
+        <span class="placeholder-tag">12 Эпох Королей</span>
+        <span class="placeholder-tag">Наши дни</span>
+      </div>
+      <span class="wip-badge">✦ В разработке ✦</span>
     </div>
-    <span class="wip-badge">✦ В разработке ✦</span>
+
+    <div id="footer-placeholder"></div>
   </div>
 
-  <footer class="site-footer">
-    <ul class="footer-nav">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="lore.html">Лор</a></li>
-      <li><a href="races.html">Расы</a></li>
-      <li><a href="languages.html">Языки</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="regions.html">Регионы</a></li>
-      <li><a href="classes.html">Классы</a></li>
-      <li><a href="tips.html">Советы</a></li>
-      <li><a href="gods.html">Боги</a></li>
-      <li><a href="eras.html">Эры</a></li>
-    </ul>
-    <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
-  </footer>
-
-</div>
-
-<script>
-  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
-</script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>

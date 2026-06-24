@@ -3,300 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
   <title>Советы Новичкам — Туэрбэлл</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-page="tips">
 
-<nav class="site-nav">
-  <a href="index.html" class="nav-brand">
-    <img src="logo.jpg" alt="Туэрбэлл">
-    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html" class="active">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html">Эры</a></li>
-  </ul>
-  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
-</nav>
+  <div id="header-placeholder"></div>
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="mobile-drawer" id="mobile-drawer">
-  <div class="drawer-close-row">
-    <span class="drawer-title">Навигация</span>
-    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
-  </div>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта Мира</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html" class="active">Советы новичкам</a></li>
-    <li><a href="gods.html">Боги и религии</a></li>
-    <li><a href="eras.html">Эры и эпохи</a></li>
-  </ul>
-</div>
+  <div class="page-content">
+  <main class="section">
 
-<div class="page-content">
-<main class="section">
-
-  <div class="page-header">
-    <h1>📖 Советы Новичкам</h1>
-    <p>Впервые играешь в Pathfinder 2e? Вот что нужно знать с первого сеанса</p>
-  </div>
-
-  <!-- Action economy highlight -->
-  <div class="announcement" style="margin-bottom:2rem;">
-    <div class="announcement-badge">
-      <span class="live-dot"></span>
-      Самое важное
+    <div class="page-header">
+      <h1>📖 Советы Новичкам</h1>
+      <p>Впервые играешь в Pathfinder 2e? Вот что нужно знать с первого сеанса</p>
     </div>
-    <h2 style="font-size:1.4rem;">Система трёх действий</h2>
-    <p>
-      В Pathfinder 2e каждый ход ты имеешь ровно
-      <strong style="color:var(--gold)">3 действия</strong> и
-      <strong style="color:var(--gold)">1 реакцию</strong>.
-      Действие — это атака, перемещение, заклинание, взаимодействие с предметом.
-      Большинство заклинаний стоят 2 действия, мощные — 3.
-      Это фундамент всей системы — всё остальное построено вокруг него.
-    </p>
-    <p style="margin:0;">
-      Реакция срабатывает в ход противника: блок щитом, атака при отступлении врага и т.д.
-      У каждого класса она своя — не забывай использовать!
-    </p>
-  </div>
 
-  <div class="tips-grid">
-
-    <div class="tip-card">
-      <div class="tip-number">1</div>
-      <div class="tip-body">
-        <span class="tip-tag">Бой</span>
-        <h3>Штраф на повторные атаки</h3>
-        <p>
-          Вторая атака в ход получает −5, третья — −10. Три атаки подряд обычно плохая идея.
-          Лучше: 2 атаки + перемещение или захват позиции — это почти всегда эффективнее.
-        </p>
+    <div class="announcement" style="margin-bottom:2rem;">
+      <div class="announcement-badge">
+        <span class="live-dot"></span>
+        Самое важное
       </div>
+      <h2 style="font-size:1.4rem;">Система трёх действий</h2>
+      <p>
+        В Pathfinder 2e каждый ход ты имеешь ровно
+        <strong style="color:var(--gold)">3 действия</strong> и
+        <strong style="color:var(--gold)">1 реакцию</strong>.
+        Действие — это атака, перемещение, заклинание, взаимодействие с предметом.
+        Большинство заклинаний стоят 2 действия, мощные — 3.
+        Это фундамент всей системы — всё остальное построено вокруг него.
+      </p>
+      <p style="margin:0;">
+        Реакция срабатывает в ход противника: блок щитом, атака при отступлении врага и т.д.
+        У каждого класса она своя — не забывай использовать!
+      </p>
     </div>
 
-    <div class="tip-card">
-      <div class="tip-number">2</div>
-      <div class="tip-body">
-        <span class="tip-tag">Тактика</span>
-        <h3>Используй фланкирование</h3>
-        <p>
-          Если ты и союзник стоят по разные стороны от врага — вы оба получаете +2 к броскам атаки.
-          Это огромный бонус, который легко получить. Постоянно думай о позиции!
-        </p>
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <div class="tip-number">1</div>
+        <div class="tip-body">
+          <span class="tip-tag">Бой</span>
+          <h3>Штраф на повторные атаки</h3>
+          <p>Вторая атака в ход получает −5, третья — −10. Три атаки подряд обычно плохая идея.
+          Лучше: 2 атаки + перемещение или захват позиции — это почти всегда эффективнее.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tip-card">
-      <div class="tip-number">3</div>
-      <div class="tip-body">
-        <span class="tip-tag">Система</span>
-        <h3>Критические успехи и провалы</h3>
-        <p>
-          Превысил КЗ на 10+ — критический успех (двойной урон или доп. эффект).
+      <div class="tip-card">
+        <div class="tip-number">2</div>
+        <div class="tip-body">
+          <span class="tip-tag">Тактика</span>
+          <h3>Используй фланкирование</h3>
+          <p>Если ты и союзник стоят по разные стороны от врага — вы оба получаете +2 к броскам атаки.
+          Это огромный бонус, который легко получить. Постоянно думай о позиции!</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">3</div>
+        <div class="tip-body">
+          <span class="tip-tag">Система</span>
+          <h3>Критические успехи и провалы</h3>
+          <p>Превысил КЗ на 10+ — критический успех (двойной урон или доп. эффект).
           Упал ниже на 10+ — критический провал (обычно очень плохо).
-          Не бывает «просто» 20 или 1 — важны только числа.
-        </p>
+          Не бывает «просто» 20 или 1 — важны только числа.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tip-card">
-      <div class="tip-number">4</div>
-      <div class="tip-body">
-        <span class="tip-tag">Ресурсы</span>
-        <h3>Очки Героя</h3>
-        <p>
-          В начале сессии ты получаешь 1 Очко Героя (максимум 3).
+      <div class="tip-card">
+        <div class="tip-number">4</div>
+        <div class="tip-body">
+          <span class="tip-tag">Ресурсы</span>
+          <h3>Очки Героя</h3>
+          <p>В начале сессии ты получаешь 1 Очко Героя (максимум 3).
           Потрать — чтобы перебросить любой бросок или (дороже) избежать смерти.
-          Не копи — используй в критический момент!
-        </p>
+          Не копи — используй в критический момент!</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tip-card">
-      <div class="tip-number">5</div>
-      <div class="tip-body">
-        <span class="tip-tag">Система</span>
-        <h3>Мастерство (Proficiency)</h3>
-        <p>
-          Нет обычных «+бонусов от мастерства». Вместо этого: Необученный (−2 на 1-м уровне),
-          Обученный (+2), Эксперт (+4), Мастер (+6), Легендарный (+8).
-          К каждому броску добавляется твой уровень.
-        </p>
+      <div class="tip-card">
+        <div class="tip-number">5</div>
+        <div class="tip-body">
+          <span class="tip-tag">Система</span>
+          <h3>Мастерство (Proficiency)</h3>
+          <p>Необученный (−2 на 1-м уровне), Обученный (+2), Эксперт (+4), Мастер (+6), Легендарный (+8).
+          К каждому броску добавляется твой уровень. Чем выше мастерство — тем больше разрыв.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tip-card">
-      <div class="tip-number">6</div>
-      <div class="tip-body">
-        <span class="tip-tag">Персонаж</span>
-        <h3>Расовые умения тоже важны</h3>
-        <p>
-          На каждом чётном уровне ты получаешь расовое умение (Ancestry Feat).
-          Не игнорируй их — многие дают очень полезные пассивные способности
-          или уникальные действия в бою.
-        </p>
+      <div class="tip-card">
+        <div class="tip-number">6</div>
+        <div class="tip-body">
+          <span class="tip-tag">Персонаж</span>
+          <h3>Расовые умения тоже важны</h3>
+          <p>На каждом чётном уровне ты получаешь расовое умение (Ancestry Feat).
+          Не игнорируй их — многие дают очень полезные пассивные способности или уникальные действия в бою.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tip-card">
-      <div class="tip-number">7</div>
-      <div class="tip-body">
-        <span class="tip-tag">Статусы</span>
-        <h3>Условия (Conditions) — знай основные</h3>
-        <p>
-          <strong style="color:var(--gold)">Плоскостопный</strong> — −2 к КЗ, можно получить сник-атаку.
+      <div class="tip-card">
+        <div class="tip-number">7</div>
+        <div class="tip-body">
+          <span class="tip-tag">Статусы</span>
+          <h3>Условия — знай основные</h3>
+          <p><strong style="color:var(--gold)">Плоскостопный</strong> — −2 к КЗ, можно получить сник-атаку.
           <strong style="color:var(--gold)">Захвачен</strong> — нельзя двигаться.
-          <strong style="color:var(--gold)">Ошеломлён</strong> — теряешь действия.
-          Выучи их — они встречаются постоянно.
-        </p>
+          <strong style="color:var(--gold)">Ошеломлён</strong> — теряешь действия. Выучи их — встречаются постоянно.</p>
+        </div>
       </div>
+
+      <div class="tip-card">
+        <div class="tip-number">8</div>
+        <div class="tip-body">
+          <span class="tip-tag">Режимы</span>
+          <h3>Разведывательный режим</h3>
+          <p>Вне боя игра идёт в режиме разведки. Объяви ведущему свою активность:
+          «Исследую», «Прислушиваюсь», «Подкрадываюсь» — это влияет на что случится при встрече с противником.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">9</div>
+        <div class="tip-body">
+          <span class="tip-tag">Тактика</span>
+          <h3>Командная игра — ключ к победе</h3>
+          <p>PF2e сильно поощряет координацию. Один баффает, второй фланкирует, третий дебаффает.
+          Группа, работающая как команда, бьёт значительно мощнее четырёх одиночек.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">10</div>
+        <div class="tip-body">
+          <span class="tip-tag">Выживание</span>
+          <h3>Умирать по-другому</h3>
+          <p>При 0 ХП — ты «при смерти», не мёртв. Каждый ход делаешь спасбросок от смерти.
+          Три провала — смерть. Критический провал — сразу два. Союзник может стабилизировать.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">11</div>
+        <div class="tip-body">
+          <span class="tip-tag">Персонаж</span>
+          <h3>Фон (Background) — не просто флёр</h3>
+          <p>Фон персонажа даёт реальные механические преимущества: навыки, умения, атрибуты.
+          Выбирай тот, что вписывается в историю персонажа — это и полезно, и интереснее.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">12</div>
+        <div class="tip-body">
+          <span class="tip-tag">Новичкам</span>
+          <h3>Начни с простого класса</h3>
+          <p>Первая кампания? Возьми Воина или Варвара — они позволяют сосредоточиться на истории, а не на правилах.
+          Освоишься — попробуй мага. Не бери Оракула или Магуса на первый сеанс.</p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="tip-card">
-      <div class="tip-number">8</div>
-      <div class="tip-body">
-        <span class="tip-tag">Режимы</span>
-        <h3>Разведывательный режим</h3>
-        <p>
-          Вне боя игра идёт в режиме разведки. Объяви ведущему свою активность:
-          «Исследую», «Прислушиваюсь», «Подкрадываюсь» — это влияет на то,
-          что случится при встрече с противником. Не молчи!
-        </p>
+    <div class="fancy-divider"><span>⚔</span></div>
+
+    <h2 style="margin-bottom:1.25rem;">Быстрая шпаргалка</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;">
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Стоимость атак</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">1-я атака: нет штрафа<br>2-я атака: −5<br>3-я атака: −10</p>
       </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Крит / Провал</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">КЗ +10 = крит. успех<br>КЗ −10 = крит. провал<br>Не зависит от кубика</p>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Перемещение</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">1 действие = скорость<br>Бег = 2 действия = ×2<br>Подъём = ½ скорости</p>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Смерть</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">0 ХП = при смерти<br>Спасбросок каждый ход<br>3 провала = смерть</p>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Фланкирование</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">Союзник с другой стороны<br>+2 к атаке обоим<br>Враг = плоскостопный</p>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
+        <div style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Очки Героя</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">1 в начале сессии<br>Максимум 3<br>Перебросок или от смерти</p>
+      </div>
+
     </div>
 
-    <div class="tip-card">
-      <div class="tip-number">9</div>
-      <div class="tip-body">
-        <span class="tip-tag">Тактика</span>
-        <h3>Командная игра — ключ к победе</h3>
-        <p>
-          PF2e сильно поощряет координацию. Один баффает, второй фланкирует,
-          третий дебаффает. Группа, работающая как команда, бьёт значительно мощнее
-          чем четыре одиночки. Общайся с союзниками!
-        </p>
-      </div>
-    </div>
+  </main>
 
-    <div class="tip-card">
-      <div class="tip-number">10</div>
-      <div class="tip-body">
-        <span class="tip-tag">Выживание</span>
-        <h3>Умирать по-другому</h3>
-        <p>
-          При 0 ХП — ты «при смерти», не мёртв. Каждый ход делаешь спасбросок
-          от смерти. Три провала — смерть. Критический провал — сразу два.
-          Союзник может тебя стабилизировать, потратив действие на лечение.
-        </p>
-      </div>
-    </div>
-
-    <div class="tip-card">
-      <div class="tip-number">11</div>
-      <div class="tip-body">
-        <span class="tip-tag">Персонаж</span>
-        <h3>Фон (Background) — не просто флёр</h3>
-        <p>
-          Фон персонажа даёт реальные механические преимущества: навыки, умения,
-          атрибуты. Выбирай тот, что вписывается в историю персонажа — это
-          и полезно, и интереснее для отыгрыша.
-        </p>
-      </div>
-    </div>
-
-    <div class="tip-card">
-      <div class="tip-number">12</div>
-      <div class="tip-body">
-        <span class="tip-tag">Новичкам</span>
-        <h3>Начни с простого класса</h3>
-        <p>
-          Первая кампания? Возьми Воина или Варвара — они позволяют сосредоточиться
-          на истории, а не на правилах. Освоишься — попробуй мага или что-то экзотическое.
-          PF2e богат вариантами, но не стоит брать Оракула на первый сеанс.
-        </p>
-      </div>
-    </div>
-
+  <div id="footer-placeholder"></div>
   </div>
 
-  <div class="fancy-divider"><span>⚔</span></div>
-
-  <!-- Quick reference -->
-  <h2 style="margin-bottom:1.25rem;">Быстрая шпаргалка</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;">
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Стоимость атак</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">1-я атака: нет штрафа<br>2-я атака: −5<br>3-я атака: −10</p>
-    </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Типы бросков</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">Атака vs КЗ<br>Спасбросок vs КС<br>Навык vs КС</p>
-    </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Крит / Провал</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">КЗ +10 = крит. успех<br>КЗ −10 = крит. провал<br>Не зависит от кубика</p>
-    </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Перемещение</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">1 действие = скорость<br>Бег = 2 действия = ×2<br>Подъём = половина скорости</p>
-    </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Смерть</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">0 ХП = при смерти<br>Спасбросок каждый ход<br>3 провала = смерть</p>
-    </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:1rem;">
-      <div style="font-family:var(--font-heading);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Фланкирование</div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin:0;">Союзник по другую сторону<br>+2 к атаке обоим<br>Враг становится плоскостопным</p>
-    </div>
-
-  </div>
-
-</main>
-
-<footer class="site-footer">
-  <ul class="footer-nav">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html">Эры</a></li>
-  </ul>
-  <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
-</footer>
-</div>
-
-<script>
-  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
-</script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>
