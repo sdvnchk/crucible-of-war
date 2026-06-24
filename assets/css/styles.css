@@ -558,11 +558,10 @@ li { margin-bottom: 0.3rem; }
 }
 .class-header { display: flex; align-items: center; gap: 0.7rem; }
 .class-icon {
-  font-size: 1.8rem;
   width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: var(--bg-main);
+  border: 1.5px dashed var(--border);
   border-radius: 6px;
   flex-shrink: 0;
   transition: border-color var(--tr);
@@ -805,8 +804,8 @@ li { margin-bottom: 0.3rem; }
   .tips-grid { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
   .map-container {
-    height: calc(100vh - var(--nav-height) - 60px);
-    min-height: 320px;
+    height: 55vh;
+    min-height: 280px;
   }
   .races-grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); }
   .announcement { padding: 1.25rem; }
