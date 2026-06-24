@@ -3,211 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="./">
   <title>Горнило Войны — Мир Туэрбэлл</title>
   <meta name="description" content="Официальный сайт кастомного мира Туэрбэлл для Pathfinder 2e">
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-page="home">
 
-<nav class="site-nav">
-  <a href="index.html" class="nav-brand">
-    <img src="logo.jpg" alt="Туэрбэлл">
-    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html"     class="active">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы</a></li>
-    <li><a href="gods.html">Боги</a></li>
-    <li><a href="eras.html">Эры</a></li>
-  </ul>
-  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
-</nav>
+  <div id="header-placeholder"></div>
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="mobile-drawer" id="mobile-drawer">
-  <div class="drawer-close-row">
-    <span class="drawer-title">Навигация</span>
-    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
+  <div class="page-content">
+
+    <header class="hero">
+      <img src="assets/img/logo.jpg" alt="Дракон Туэрбэлл" class="hero-dragon">
+      <h1 class="hero-title">Горнило Войны</h1>
+      <p class="hero-subtitle">⚔&nbsp;&nbsp;Мир Туэрбэлл&nbsp;&nbsp;⚔</p>
+      <div class="hero-divider"><span>✦</span></div>
+      <p style="max-width:580px;margin:0 auto;color:var(--text-muted);font-style:italic;font-size:1.05rem;">
+        Вечная война. Бессмертные короли. Смертные, ставшие богами.
+        Добро пожаловать в мир, рождённый из страдания и воли к свободе.
+      </p>
+    </header>
+
+    <main class="section">
+
+      <div class="announcement">
+        <div class="announcement-badge">
+          <span class="live-dot"></span>
+          Обновление сайта — Новая эра
+        </div>
+        <h2>Переход на Pathfinder 2e</h2>
+        <p>
+          Долгие годы наш мир жил по законам <strong style="color:var(--gold)">Dungeons &amp; Dragons 5e</strong>.
+          Теперь Туэрбэлл делает большой шаг вперёд — мы полностью переходим на
+          <strong style="color:var(--gold)">Pathfinder 2e</strong>.
+          Это не просто смена системы правил. Это переосмысление всего: расы получат
+          обновлённую историю и механики, лор будет дополнен и переработан,
+          регионы обретут подробные описания.
+        </p>
+        <p>
+          Сайт сейчас активно обновляется. Карта мира доступна уже сейчас —
+          с нормальным зумом и перетаскиванием. Разделы с классами и советами
+          новичкам тоже готовы. Остальные разделы — заготовки под будущий лор.
+        </p>
+      </div>
+
+      <h2 style="margin-bottom:1.25rem;">Разделы сайта</h2>
+      <div class="card-grid">
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">📜 Лор</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            История мира Туэрбэлл: от сотворения до наших дней.
+            Трусливые боги, вечная война и рождение Двенадцати Королей.
+          </p>
+          <a href="pages/lore.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Читать лор →</a>
+        </div>
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">🧝 Расы</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            Все расы мира Туэрбэлл — от древних эльфов до загадочных фуртов.
+            История, культура, механики для Pathfinder 2e.
+          </p>
+          <a href="pages/races.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Смотреть расы →</a>
+        </div>
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">🗺️ Карта Мира</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            Интерактивная карта Туэрбэлл с масштабированием и перетаскиванием.
+            Работает на мобильных устройствах.
+          </p>
+          <a href="pages/map.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Открыть карту →</a>
+        </div>
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">⚔️ Классы</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            Все классы Pathfinder 2e с описаниями, иконками и уровнем сложности.
+            Найди своего персонажа.
+          </p>
+          <a href="pages/classes.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Выбрать класс →</a>
+        </div>
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">📖 Советы Новичкам</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            Впервые играешь в Pathfinder 2e? Здесь всё самое важное:
+            система действий, механики боя, советы по классам.
+          </p>
+          <a href="pages/tips.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Читать советы →</a>
+        </div>
+
+        <div class="card-fantasy">
+          <h3 style="font-size:1rem;">🌍 Регионы</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
+            Континенты, государства и территории Туэрбэлл.
+            Каждый регион — своя история, своя власть, свои законы.
+          </p>
+          <a href="pages/regions.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Смотреть регионы →</a>
+        </div>
+
+      </div>
+
+      <div class="fancy-divider"><span>⚔</span></div>
+
+      <h2 style="margin-bottom:1.5rem;">История обновлений</h2>
+
+      <div class="changelog-item">
+        <div class="changelog-ver current">v2.0</div>
+        <div>
+          <div class="changelog-title">Переход на Pathfinder 2e — Полный редизайн</div>
+          <p class="changelog-desc">Полное переосмысление сайта и мира. Новый дизайн, новые разделы, переработанный лор.</p>
+          <ul class="changelog-list">
+            <li>Новый фэнтезийный дизайн с золотой цветовой схемой и средневековыми шрифтами</li>
+            <li>Переход системы с D&amp;D 5e на Pathfinder 2e</li>
+            <li>Добавлены разделы: Классы, Советы новичкам, Языки, Регионы</li>
+            <li>Полностью переработана карта мира (нормальный зум и перетаскивание)</li>
+            <li>Файлы организованы по папкам, хедер и футер вынесены в отдельные компоненты</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="changelog-item">
+        <div class="changelog-ver">v1.1</div>
+        <div>
+          <div class="changelog-title">Улучшение навигации и мобильной версии</div>
+          <ul class="changelog-list">
+            <li>Добавлено бургер-меню для мобильных устройств</li>
+            <li>Подсказка для лупы на карте мира</li>
+            <li>Улучшена навигационная панель (теперь прилипает к верху)</li>
+            <li>Исправлены мелкие баги</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="changelog-item">
+        <div class="changelog-ver">v1.0</div>
+        <div>
+          <div class="changelog-title">Первый публичный релиз — D&amp;D 5e</div>
+          <p class="changelog-desc">Запуск сайта с основным контентом: главная страница, лор, карта мира и подробные расы для D&amp;D 5e.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
   </div>
-  <ul>
-    <li><a href="index.html" class="active">Главная</a></li>
-    <li><a href="lore.html">Лор</a></li>
-    <li><a href="races.html">Расы</a></li>
-    <li><a href="languages.html">Языки</a></li>
-    <li><a href="map.html">Карта Мира</a></li>
-    <li><a href="regions.html">Регионы</a></li>
-    <li><a href="classes.html">Классы</a></li>
-    <li><a href="tips.html">Советы новичкам</a></li>
-    <li><a href="gods.html">Боги и религии</a></li>
-    <li><a href="eras.html">Эры и эпохи</a></li>
-  </ul>
-</div>
 
-<div class="page-content">
-
-  <header class="hero">
-    <img src="logo.jpg" alt="Дракон Туэрбэлл" class="hero-dragon">
-    <h1 class="hero-title">Горнило Войны</h1>
-    <p class="hero-subtitle">⚔&nbsp;&nbsp;Мир Туэрбэлл&nbsp;&nbsp;⚔</p>
-    <div class="hero-divider"><span>✦</span></div>
-    <p style="max-width:580px;margin:0 auto;color:var(--text-muted);font-style:italic;font-size:1.05rem;">
-      Вечная война. Бессмертные короли. Смертные, ставшие богами.
-      Добро пожаловать в мир, рождённый из страдания и воли к свободе.
-    </p>
-  </header>
-
-  <main class="section">
-
-    <div class="announcement">
-      <div class="announcement-badge">
-        <span class="live-dot"></span>
-        Обновление сайта — Новая эра
-      </div>
-      <h2>Переход на Pathfinder 2e</h2>
-      <p>
-        Долгие годы наш мир жил по законам <strong style="color:var(--gold)">Dungeons &amp; Dragons 5e</strong>.
-        Теперь Туэрбэлл делает большой шаг вперёд — мы полностью переходим на
-        <strong style="color:var(--gold)">Pathfinder 2e</strong>.
-        Это не просто смена системы правил. Это переосмысление всего: расы получат
-        обновлённую историю и механики, лор будет дополнен и переработан,
-        регионы обретут подробные описания.
-      </p>
-      <p>
-        Сайт сейчас активно обновляется. Карта мира доступна уже сейчас —
-        с нормальным зумом и перетаскиванием. Разделы с классами и советами
-        новичкам тоже готовы. Остальные разделы — заготовки под будущий лор.
-      </p>
-    </div>
-
-    <h2 style="margin-bottom:1.25rem;">Разделы сайта</h2>
-    <div class="card-grid">
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">📜 Лор</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          История мира Туэрбэлл: от сотворения до наших дней.
-          Трусливые боги, вечная война и рождение Двенадцати Королей.
-        </p>
-        <a href="lore.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Читать лор →</a>
-      </div>
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">🧝 Расы</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          Все расы мира Туэрбэлл — от древних эльфов до загадочных фуртов.
-          История, культура, механики для Pathfinder 2e.
-        </p>
-        <a href="races.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Смотреть расы →</a>
-      </div>
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">🗺️ Карта Мира</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          Интерактивная карта Туэрбэлл с масштабированием и перетаскиванием.
-          Работает на мобильных устройствах.
-        </p>
-        <a href="map.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Открыть карту →</a>
-      </div>
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">⚔️ Классы</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          Все классы Pathfinder 2e с описаниями, иконками и уровнем сложности.
-          Найди своего персонажа.
-        </p>
-        <a href="classes.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Выбрать класс →</a>
-      </div>
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">📖 Советы Новичкам</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          Впервые играешь в Pathfinder 2e? Здесь всё самое важное:
-          система действий, механики боя, советы по классам.
-        </p>
-        <a href="tips.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Читать советы →</a>
-      </div>
-
-      <div class="card-fantasy">
-        <h3 style="font-size:1rem;">🌍 Регионы</h3>
-        <p style="font-size:0.9rem;color:var(--text-muted);margin:0.5rem 0 1rem;">
-          Континенты, государства и территории Туэрбэлл.
-          Каждый регион — своя история, своя власть, свои законы.
-        </p>
-        <a href="regions.html" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Смотреть регионы →</a>
-      </div>
-
-    </div>
-
-    <div class="fancy-divider"><span>⚔</span></div>
-
-    <h2 style="margin-bottom:1.5rem;">История обновлений</h2>
-
-    <div class="changelog-item">
-      <div class="changelog-ver current">v2.0</div>
-      <div>
-        <div class="changelog-title">Переход на Pathfinder 2e — Полный редизайн</div>
-        <p class="changelog-desc">Полное переосмысление сайта и мира. Новый дизайн, новые разделы, переработанный лор.</p>
-        <ul class="changelog-list">
-          <li>Новый фэнтезийный дизайн с золотой цветовой схемой и средневековыми шрифтами</li>
-          <li>Переход системы с D&amp;D 5e на Pathfinder 2e</li>
-          <li>Добавлены разделы: Классы, Советы новичкам, Языки, Регионы</li>
-          <li>Полностью переработана карта мира (нормальный зум и перетаскивание)</li>
-          <li>Все разделы расчищены под новый лор, заготовки готовы к наполнению</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="changelog-item">
-      <div class="changelog-ver">v1.1</div>
-      <div>
-        <div class="changelog-title">Улучшение навигации и мобильной версии</div>
-        <ul class="changelog-list">
-          <li>Добавлено бургер-меню для мобильных устройств</li>
-          <li>Подсказка для лупы на карте мира</li>
-          <li>Улучшена навигационная панель (теперь прилипает к верху)</li>
-          <li>Исправлены мелкие баги</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="changelog-item">
-      <div class="changelog-ver">v1.0</div>
-      <div>
-        <div class="changelog-title">Первый публичный релиз — D&amp;D 5e</div>
-        <p class="changelog-desc">Запуск сайта с основным контентом: главная страница, лор, карта мира и подробные расы для D&amp;D 5e.</p>
-      </div>
-    </div>
-
-  </main>
-
-  <footer class="site-footer">
-    <ul class="footer-nav">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="lore.html">Лор</a></li>
-      <li><a href="races.html">Расы</a></li>
-      <li><a href="languages.html">Языки</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="regions.html">Регионы</a></li>
-      <li><a href="classes.html">Классы</a></li>
-      <li><a href="tips.html">Советы</a></li>
-      <li><a href="gods.html">Боги</a></li>
-      <li><a href="eras.html">Эры</a></li>
-    </ul>
-    <p class="footer-copy">© Горнило Войны — Мир <span>Туэрбэлл</span> &nbsp;·&nbsp; Pathfinder 2e</p>
-  </footer>
-
-</div>
-
-<script>
-  function openDrawer()  { document.getElementById('mobile-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.body.style.overflow=''; }
-</script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>

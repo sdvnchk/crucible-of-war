@@ -215,6 +215,9 @@ li { margin-bottom: 0.3rem; }
 }
 .drawer-overlay.open { display: block; }
 
+/* ── Component placeholders ───────────────────────────── */
+#header-placeholder { min-height: var(--nav-height); }
+
 /* ── Page wrapper ─────────────────────────────────────── */
 .page-content {
   padding-top: var(--nav-height);

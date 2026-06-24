@@ -1,0 +1,39 @@
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/img/logo.jpg" alt="Туэрбэлл">
+    <div class="nav-brand-text">Горнило Войны<small>Мир Туэрбэлл</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"            data-navkey="home">Главная</a></li>
+    <li><a href="pages/lore.html"       data-navkey="lore">Лор</a></li>
+    <li><a href="pages/races.html"      data-navkey="races">Расы</a></li>
+    <li><a href="pages/languages.html"  data-navkey="languages">Языки</a></li>
+    <li><a href="pages/map.html"        data-navkey="map">Карта</a></li>
+    <li><a href="pages/regions.html"    data-navkey="regions">Регионы</a></li>
+    <li><a href="pages/classes.html"    data-navkey="classes">Классы</a></li>
+    <li><a href="pages/tips.html"       data-navkey="tips">Советы</a></li>
+    <li><a href="pages/gods.html"       data-navkey="gods">Боги</a></li>
+    <li><a href="pages/eras.html"       data-navkey="eras">Эры</a></li>
+  </ul>
+  <button class="burger-btn" onclick="openDrawer()" aria-label="Меню">&#9776;</button>
+</nav>
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="drawer-close-row">
+    <span class="drawer-title">Навигация</span>
+    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
+  </div>
+  <ul>
+    <li><a href="index.html"            data-navkey="home">Главная</a></li>
+    <li><a href="pages/lore.html"       data-navkey="lore">Лор</a></li>
+    <li><a href="pages/races.html"      data-navkey="races">Расы</a></li>
+    <li><a href="pages/languages.html"  data-navkey="languages">Языки</a></li>
+    <li><a href="pages/map.html"        data-navkey="map">Карта Мира</a></li>
+    <li><a href="pages/regions.html"    data-navkey="regions">Регионы</a></li>
+    <li><a href="pages/classes.html"    data-navkey="classes">Классы</a></li>
+    <li><a href="pages/tips.html"       data-navkey="tips">Советы новичкам</a></li>
+    <li><a href="pages/gods.html"       data-navkey="gods">Боги и религии</a></li>
+    <li><a href="pages/eras.html"       data-navkey="eras">Эры и эпохи</a></li>
+  </ul>
+</div>
