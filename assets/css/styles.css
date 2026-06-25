@@ -32,9 +32,17 @@
 
 /* ── Base ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Масштабируем весь интерфейс под ширину экрана: крупнее на 2K+ */
+  font-size: clamp(16px, 0.6vw + 6px, 21px);
+}
 
 body {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   background-color: var(--bg-deep);
   background-image:
     radial-gradient(ellipse 85% 55% at 12% 30%, rgba(160,120,40,0.06) 0%, transparent 65%),
@@ -49,7 +57,7 @@ body {
   min-height: 100vh;
 }
 
-a { color: var(--gold); text-decoration: none; transition: color var(--tr); }
+a { color: var(--gold); text-decoration: none; transition: color var(--tr); cursor: pointer; }
 a:hover { color: var(--gold-bright); }
 
 h1, h2, h3, h4, h5 {
@@ -285,16 +293,12 @@ li { margin-bottom: 0.3rem; }
 .hero-divider span { color: var(--gold-dim); font-size: 1.1rem; text-shadow: 0 0 8px rgba(160,120,40,0.35); }
 
 /* ── Main sections ────────────────────────────────────── */
-.section {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  flex: 1;
-}
+.section,
 .section-wide {
-  max-width: 1760px;
+  width: 85%;
+  max-width: 2100px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
   flex: 1;
 }
 
@@ -584,24 +588,22 @@ li { margin-bottom: 0.3rem; }
 }
 .class-header { display: flex; align-items: center; gap: 0.7rem; }
 .class-icon {
-  width: 48px; height: 48px;
+  width: 54px; height: 54px;
   display: flex; align-items: center; justify-content: center;
-  background: var(--bg-main);
-  border: 1px solid var(--border);
-  border-radius: 4px;
   flex-shrink: 0;
-  overflow: hidden;
-  transition: border-color var(--tr);
 }
-.class-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.class-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .class-icon.empty {
-  border-style: dashed;
+  background: var(--bg-main);
+  border: 1.5px dashed var(--border);
+  border-radius: 50%;
   color: var(--text-dim);
   font-family: var(--font-title);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
+  transition: border-color var(--tr);
 }
-.class-card:hover .class-icon { border-color: var(--border-gold); }
+.class-card:hover .class-icon.empty { border-color: var(--border-gold); }
 .class-name {
   font-family: var(--font-heading);
   font-size: 1rem;
@@ -930,6 +932,7 @@ li { margin-bottom: 0.3rem; }
 @media (max-width: 860px) {
   .nav-links { display: none; }
   .burger-btn { display: flex; }
+  .section, .section-wide { width: 92%; }
 
   /* Map hidden on mobile; show notice instead */
   .map-mobile-notice {
