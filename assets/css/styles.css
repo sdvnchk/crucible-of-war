@@ -776,6 +776,71 @@ li { margin-bottom: 0.3rem; }
   line-height: 1.3;
 }
 
+/* ── Languages ────────────────────────────────────────── */
+.lang-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.lang-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all var(--tr);
+  box-shadow: inset 0 0 0 1px rgba(196,160,96,0.1), 0 1px 4px rgba(80,50,10,0.07);
+}
+.lang-card:hover {
+  border-color: var(--border-gold);
+  box-shadow: inset 0 0 0 1px rgba(196,160,96,0.22), 0 4px 14px rgba(80,50,10,0.14);
+  transform: translateY(-2px);
+}
+.lang-card.lc-common   { border-left-color: #4a7a30; }
+.lang-card.lc-uncommon { border-left-color: #2f6090; }
+.lang-card.lc-rare     { border-left-color: #a8431a; }
+.lang-card.lc-secret   { border-left-color: #6a3a8a; }
+.lang-name {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.lang-desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.55; margin: 0; flex: 1; }
+.lang-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: auto; }
+.lang-rarity, .lang-trait {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.16rem 0.5rem;
+  border-radius: 3px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.r-common   { color: #4a7a30; border-color: rgba(74,122,48,0.45);  background: rgba(74,122,48,0.08); }
+.r-uncommon { color: #2f6090; border-color: rgba(47,96,144,0.45);  background: rgba(47,96,144,0.08); }
+.r-rare     { color: #a8431a; border-color: rgba(168,67,26,0.45);  background: rgba(168,67,26,0.08); }
+.r-secret   { color: #6a3a8a; border-color: rgba(106,58,138,0.5);  background: rgba(106,58,138,0.09); }
+.lang-trait { color: var(--gold); border-color: var(--border-gold); background: var(--gold-dark); }
+
 /* ── Page header ──────────────────────────────────────── */
 .page-header {
   padding-bottom: 1.75rem;
@@ -886,6 +951,7 @@ li { margin-bottom: 0.3rem; }
   .classes-grid { grid-template-columns: 1fr 1fr; }
   .tips-grid { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
+  .lang-grid { grid-template-columns: 1fr; }
   .races-grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); }
   .announcement { padding: 1.25rem; }
 }
