@@ -587,11 +587,13 @@ li { margin-bottom: 0.3rem; }
   width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
   background: var(--bg-main);
-  border: 1.5px dashed var(--border);
+  border: 1px solid var(--border);
   border-radius: 4px;
   flex-shrink: 0;
+  overflow: hidden;
   transition: border-color var(--tr);
 }
+.class-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .class-card:hover .class-icon { border-color: var(--border-gold); }
 .class-name {
   font-family: var(--font-heading);
@@ -747,6 +749,7 @@ li { margin-bottom: 0.3rem; }
   border: 1.5px dashed var(--border);
   border-radius: 4px;
 }
+.race-img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .race-card-body { padding: 0.65rem 0.75rem; }
 .race-name {
   font-family: var(--font-heading);
