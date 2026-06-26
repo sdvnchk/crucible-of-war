@@ -1127,13 +1127,13 @@ li { margin-bottom: 0.3rem; }
 .class-card::after, .lang-card::after, .race-card::after, .feature-card::after {
   content: '';
   position: absolute;
-  width: 52px;
-  height: 52px;
-  background-image: url('../img/ornament-card.svg');
+  width: 64px;
+  height: 64px;
+  background-image: url('../img/ornament.svg');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: 0.42;
+  opacity: 0.55;
   transition: opacity var(--tr);
   z-index: 2;
 }
@@ -1151,7 +1151,7 @@ li { margin-bottom: 0.3rem; }
 .class-card:hover::before, .class-card:hover::after,
 .lang-card:hover::before, .lang-card:hover::after,
 .race-card:hover::before, .race-card:hover::after,
-.feature-card:hover::before, .feature-card:hover::after { opacity: 0.85; }
+.feature-card:hover::before, .feature-card:hover::after { opacity: 0.9; }
 
 /* ── Trait Glossary ─────────────────────────────────── */
 .trait-glossary {
