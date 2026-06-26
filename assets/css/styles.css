@@ -987,12 +987,12 @@ li { margin-bottom: 0.3rem; }
   border: 1.5px solid currentColor;
   opacity: 0.38;
 }
-/* All 4 corner SVG ornaments */
+/* All 4 corner ornaments */
 .pfc {
   position: absolute;
-  width: 60px; height: 60px;
-  overflow: visible;
-  opacity: 0.75;
+  width: 90px; height: 90px;
+  display: block;
+  opacity: 0.65;
 }
 .pfc-tl { top: 0;    left: 0;  }
 .pfc-tr { top: 0;    right: 0; transform: scaleX(-1); }
