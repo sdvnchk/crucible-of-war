@@ -1004,8 +1004,20 @@ li { margin-bottom: 0.3rem; }
 .epigraph {
   text-align: center;
   max-width: 740px;
-  margin: 0 auto 3rem;
-  padding: 1.75rem 1rem;
+  margin: 0 auto 1rem;
+  padding: 1.75rem 1rem 0 1rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.32rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  position: relative;
+}
+.epigraph2 {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1rem;
   font-family: var(--font-body);
   font-style: italic;
   font-size: 1.32rem;
@@ -1022,15 +1034,15 @@ li { margin-bottom: 0.3rem; }
 }
 .epigraph::before { content: '“'; }
 .epigraph::after  { content: '”'; }
-.epigraph cite {
+.epigraph2 cite {
   display: block;
   font-family: var(--font-heading);
   font-style: normal;
   font-size: 0.64rem;
+  margin-bottom: 3rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold-dim);
-  margin-top: 1rem;
 }
 
 /* Section heading with ornament (home) */
