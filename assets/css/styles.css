@@ -1124,6 +1124,53 @@ li { margin-bottom: 0.3rem; }
   padding: 0.14rem 0.6rem;
 }
 
+/* ── Corner ornaments on content cards (like page frame) ─ */
+.class-card,
+.lang-card { position: relative; }
+
+.class-card::before, .class-card::after,
+.lang-card::before, .lang-card::after {
+  content: '';
+  position: absolute;
+  width: 11px; height: 11px;
+  border-color: var(--gold-dim);
+  opacity: 0.22;
+  transition: opacity var(--tr);
+  pointer-events: none;
+}
+.class-card::before, .lang-card::before {
+  top: 6px; left: 6px;
+  border-top: 1px solid; border-left: 1px solid;
+}
+.class-card::after, .lang-card::after {
+  bottom: 6px; right: 6px;
+  border-bottom: 1px solid; border-right: 1px solid;
+}
+.class-card:hover::before, .class-card:hover::after,
+.lang-card:hover::before, .lang-card:hover::after { opacity: 0.65; }
+
+/* Race cards (overflow:hidden, smaller) */
+.race-card { position: relative; }
+.race-card::before, .race-card::after {
+  content: '';
+  position: absolute;
+  width: 8px; height: 8px;
+  border-color: var(--gold-dim);
+  opacity: 0.2;
+  transition: opacity var(--tr);
+  pointer-events: none;
+  z-index: 1;
+}
+.race-card::before { top: 4px; left: 4px; border-top: 1px solid; border-left: 1px solid; }
+.race-card::after  { bottom: 4px; right: 4px; border-bottom: 1px solid; border-right: 1px solid; }
+.race-card:hover::before, .race-card:hover::after { opacity: 0.6; }
+
+/* Feature cards: make default corner visibility 0.2 (were hover-only) */
+.feature-card::before,
+.feature-card::after { opacity: 0.2; }
+.feature-card:hover::before,
+.feature-card:hover::after { opacity: 1; }
+
 /* Changelog wrapper panel */
 .changelog-panel {
   background: var(--bg-surface);
