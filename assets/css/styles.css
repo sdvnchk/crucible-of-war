@@ -869,13 +869,13 @@ li { margin-bottom: 0.3rem; }
 .page-header::after {
   content: '◆';
   position: absolute;
-  bottom: -0.47rem;
+  bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--gold-dim);
+  color: var(--border-gold);
   background: var(--bg-deep);
-  padding: 0 0.4rem;
-  font-size: 0.55rem;
+  padding: 0 0.5rem;
+  font-size: 0.65rem;
   line-height: 1;
 }
 .page-header h1 { font-size: clamp(1.5rem, 4vw, 2.4rem); }
@@ -1120,38 +1120,38 @@ li { margin-bottom: 0.3rem; }
   padding: 0.14rem 0.6rem;
 }
 
-/* ── Decorative SVG corner ornaments — all card types ── */
+/* ── Decorative corner scroll ornaments — all card types ── */
 .class-card, .lang-card, .race-card, .feature-card { position: relative; }
 
 .class-card::before, .lang-card::before, .race-card::before, .feature-card::before,
 .class-card::after, .lang-card::after, .race-card::after, .feature-card::after {
   content: '';
   position: absolute;
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
+  background-image: url('../img/ornament-card.svg');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 0.42;
   transition: opacity var(--tr);
   z-index: 2;
 }
 /* TL corner */
 .class-card::before, .lang-card::before, .race-card::before, .feature-card::before {
-  top: 5px;
-  left: 5px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M 10,4.5 C 10,1 6,0 4,2 C 2,4 3,7.5 6,7.5 C 8,7.5 10,6 10,4.5 Z' stroke='%239a7028' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' fill='rgba(154,112,40,0.08)'/%3E%3Cpath d='M 4.5,10 C 1,10 0,6 2,4 C 4,2 7.5,3 7.5,6 C 7.5,8 6,10 4.5,10 Z' stroke='%239a7028' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' fill='rgba(154,112,40,0.08)'/%3E%3Cpath d='M 10,4.5 L 15.5,10 L 10,15.5 L 4.5,10 Z' stroke='%239a7028' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='10' cy='10' r='1.8' fill='%239a7028'/%3E%3C/svg%3E");
+  top: 4px;
+  left: 4px;
 }
-/* BR corner (mirrored 180°) */
+/* BR corner — same ornament rotated 180° */
 .class-card::after, .lang-card::after, .race-card::after, .feature-card::after {
-  bottom: 5px;
-  right: 5px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'%3E%3Cg transform='translate(40,40) scale(-1,-1)'%3E%3Cpath d='M 10,4.5 C 10,1 6,0 4,2 C 2,4 3,7.5 6,7.5 C 8,7.5 10,6 10,4.5 Z' stroke='%239a7028' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' fill='rgba(154,112,40,0.08)'/%3E%3Cpath d='M 4.5,10 C 1,10 0,6 2,4 C 4,2 7.5,3 7.5,6 C 7.5,8 6,10 4.5,10 Z' stroke='%239a7028' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' fill='rgba(154,112,40,0.08)'/%3E%3Cpath d='M 10,4.5 L 15.5,10 L 10,15.5 L 4.5,10 Z' stroke='%239a7028' stroke-width='1.1' fill='none'/%3E%3Ccircle cx='10' cy='10' r='1.8' fill='%239a7028'/%3E%3C/g%3E%3C/svg%3E");
+  bottom: 4px;
+  right: 4px;
+  transform: scale(-1, -1);
 }
 .class-card:hover::before, .class-card:hover::after,
 .lang-card:hover::before, .lang-card:hover::after,
 .race-card:hover::before, .race-card:hover::after,
-.feature-card:hover::before, .feature-card:hover::after { opacity: 1; }
+.feature-card:hover::before, .feature-card:hover::after { opacity: 0.85; }
 
 /* ── Trait Glossary ─────────────────────────────────── */
 .trait-glossary {
