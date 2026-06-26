@@ -566,7 +566,7 @@ li { margin-bottom: 0.3rem; }
 /* ── Classes page ─────────────────────────────────────── */
 .classes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
 .class-card {
@@ -606,7 +606,7 @@ li { margin-bottom: 0.3rem; }
 .class-card:hover .class-icon.empty { border-color: var(--border-gold); }
 .class-name {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.03em;
@@ -619,7 +619,7 @@ li { margin-bottom: 0.3rem; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.class-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+.class-desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
 .class-footer { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: auto; }
 .diff-label {
   font-family: var(--font-heading);
@@ -736,7 +736,7 @@ li { margin-bottom: 0.3rem; }
 }
 .races-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -744,19 +744,26 @@ li { margin-bottom: 0.3rem; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 6px;
-  overflow: hidden;
-  transition: border-color var(--tr), box-shadow var(--tr);
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.8rem;
+  transition: border-color var(--tr), box-shadow var(--tr), transform var(--tr);
   box-shadow: inset 0 0 0 1px rgba(196,160,96,0.1), 0 1px 4px rgba(80,50,10,0.07);
 }
 .race-card:hover {
   border-color: var(--border-gold);
   box-shadow: inset 0 0 0 1px rgba(196,160,96,0.22), 0 4px 14px rgba(80,50,10,0.14);
+  transform: translateY(-2px);
 }
 .race-img-slot {
-  width: 100%;
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
   aspect-ratio: 1;
   background: var(--bg-main);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -765,26 +772,50 @@ li { margin-bottom: 0.3rem; }
   width: 68%;
   height: 68%;
   border: 1.5px dashed var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .race-img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.race-card-body { padding: 0.65rem 0.75rem; }
+.race-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.15rem 0;
+}
 .race-name {
   font-family: var(--font-heading);
-  font-size: 0.84rem;
+  font-size: 1.08rem;
   font-weight: 600;
   color: var(--gold);
-  letter-spacing: 0.03em;
-  margin-bottom: 0.15rem;
-  line-height: 1.3;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
 }
 .race-sub {
   font-family: var(--font-heading);
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-dim);
   line-height: 1.3;
+}
+.race-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+.race-rarity {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.16rem 0.5rem;
+  border-radius: 3px;
+  border: 1px solid;
+  white-space: nowrap;
 }
 
 /* ── Languages ────────────────────────────────────────── */
@@ -1252,14 +1283,14 @@ li { margin-bottom: 0.3rem; }
   :root { --nav-height: 64px; }
   .hero { padding: 2.5rem 1rem 2rem; }
   .hero-dragon { width: 80px; height: 80px; }
-  .classes-grid { grid-template-columns: 1fr 1fr; }
+  .classes-grid { grid-template-columns: 1fr; }
   .tips-grid { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
   .lang-grid { grid-template-columns: 1fr; }
-  .races-grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); }
+  .races-grid { grid-template-columns: 1fr; }
   .announcement { padding: 1.25rem; }
 }
 @media (max-width: 380px) {
   .classes-grid { grid-template-columns: 1fr; }
-  .races-grid { grid-template-columns: repeat(3, 1fr); }
+  .races-grid { grid-template-columns: 1fr; }
 }
