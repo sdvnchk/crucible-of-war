@@ -961,43 +961,35 @@ li { margin-bottom: 0.3rem; }
   background: linear-gradient(135deg, rgba(122,16,16,0.22), rgba(110,78,10,0.26));
 }
 
-/* Stat strip under the hero */
-.stat-strip {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 0 2.75rem;
-  margin-top: 2.75rem;
+/* ── Parchment page frame ─────────────────────────────── */
+.page-frame {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+  color: var(--border-gold);
 }
-.stat-item {
-  text-align: center;
-  padding: 0 0.5rem;
-  position: relative;
-}
-.stat-item + .stat-item::before {
+/* Full perimeter border line */
+.page-frame::before {
   content: '';
   position: absolute;
-  left: -1.4rem; top: 50%;
-  transform: translateY(-50%);
-  width: 1px; height: 60%;
-  background: linear-gradient(to bottom, transparent, var(--border-gold), transparent);
+  inset: 10px;
+  border: 1.5px solid currentColor;
+  opacity: 0.38;
 }
-.stat-num {
-  font-family: var(--font-title);
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
+/* All 4 corner SVG ornaments */
+.pfc {
+  position: absolute;
+  width: 60px; height: 60px;
+  overflow: visible;
+  opacity: 0.75;
 }
-.stat-label {
-  font-family: var(--font-heading);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: 0.45rem;
-}
+.pfc-tl { top: 0;    left: 0;  }
+.pfc-tr { top: 0;    right: 0; transform: scaleX(-1); }
+.pfc-bl { bottom: 0; left: 0;  transform: scaleY(-1); }
+.pfc-br { bottom: 0; right: 0; transform: scale(-1);  }
+@media (max-width: 860px) { .page-frame { display: none; } }
 
 /* Epigraph quote */
 .epigraph {
@@ -1143,8 +1135,6 @@ li { margin-bottom: 0.3rem; }
 
 @media (max-width: 600px) {
   .feature-grid { grid-template-columns: 1fr; }
-  .stat-strip { gap: 1.5rem; }
-  .stat-item + .stat-item::before { display: none; }
   .epigraph { font-size: 1.12rem; }
   .changelog-panel { padding: 1.25rem; }
   .hero-cta { gap: 0.6rem; }
